@@ -1,0 +1,12 @@
+.Tilt{
+  background: linear-gradient(90deg, rgba(200,199,232,1) 0%, rgb(235, 106, 179) 0%, rgb(209, 57, 255) 0%, rgb(89, 175, 255) 100%);
+}
+.logotxt{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  border:2px inset royalblue;
+  border-radius:10px;
+}
+.logotxt:hover{
+  border:2px inset rgb(207, 13, 255);
+  color: rgb(77, 206, 245);
+}
