@@ -19,7 +19,7 @@ class Register extends React.Component{
         this.setState({registerPassword:event.target.value})
     }
     onRegister=()=>{
-        fetch('https://sleepy-castle-93981.herokuapp.com/register',{
+        fetch(`${process.env.REACT_APP_SERVER}/register`,{
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -29,16 +29,16 @@ class Register extends React.Component{
             })
         })
         .then(res=> res.json())
-        .then(user=>{
-            if(user.id){
-                this.props.loaduser(user);
-                this.props.onRouteChange('home');
+        .then(data=>{
+            if( data && data.userId){
+                this.props.saveAuthTokenToSession(data.token)
+                this.props.getProfileAndLoadUser(data.userId, data.token)
             }
-        })
+        }).catch(err => console.log('registation error'))
     }
     render(){
         return(
-            <div className="br2 ba shadow-5 b--black-10 mv4 w-100 w-50-m w-25-l mw6 center">
+            <div className="br2 ba shadow-5 b--black-10 mv4 w-80 w-50-m w-25-l mw6 center">
                 <div className="pa4 black-80">
                     <div className="measure center">
                         <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
