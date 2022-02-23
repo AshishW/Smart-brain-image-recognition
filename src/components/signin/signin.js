@@ -38,7 +38,6 @@ class Signin extends React.Component{
             .then(res => res.json())
             .then(data=>{
                 if( data && data.userId){
-                    console.log(this.props);
                     this.props.saveAuthTokenToSession(data.token)
                     this.props.getProfileAndLoadUser(data.userId, data.token)
                 }

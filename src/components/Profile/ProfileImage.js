@@ -15,7 +15,7 @@ const ProfileImage = ({onRouteChange}) => {
           <div className="tc">
             <img
                 src={Logo}
-                className="br-100 ba  pa0 ma0 h3 w3 dib" alt="profile_picture"/>
+                className="br-100 ba pa0 ma0 h3 w3 dib" alt="profile_picture"/>
           </div>
       </DropdownToggle>
       <DropdownMenu  right>

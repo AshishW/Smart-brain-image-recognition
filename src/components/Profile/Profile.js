@@ -13,9 +13,9 @@ const Profile = ({user, loaduser, onRouteChange}) =>{
       setIsprofileopen(prevState=>!prevState);
     }
 
-    const deleteAccount = () =>{
-        onRouteChange('register');
-    }
+    // const deleteAccount = () =>{
+    //     onRouteChange('register');
+    // }
 
     return(
         <div className='relative'>
@@ -41,9 +41,9 @@ const Profile = ({user, loaduser, onRouteChange}) =>{
                 className="link tc measure center w-80 w-50-ns ph3 pv1 db pointer bg-animate bg-blue hover-bg-dark-blue white f5 br1"
                  onClick={toggleProfileEditing}
                  >Edit Account</p>
-                <p className="link tc measure center w-80 w-50-ns ph3 pv1 db pointer bg-animate bg-red hover-bg-dark-red white f5 br1"
+                {/* <p className="link tc measure center w-80 w-50-ns ph3 pv1 db pointer bg-animate bg-red hover-bg-dark-red white f5 br1"
                  onClick={deleteAccount}
-                 >Delete Account</p>      
+                 >Delete Account</p>       */}
                 </div>
                 :
                 <EditProfile toggleProfileEditing={toggleProfileEditing} user = {user} loaduser={loaduser}/>                

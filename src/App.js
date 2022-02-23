@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Navigation from './components/Navigation/Navigation';
 import Signin from './components/signin/Signin';
-import Logo from './components/Logo/Logo';
+// import Logo from './components/Logo/Logo';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 import ImageLinkForm from './components/imageLinkForm/ImageLinkForm'
 import Rank from './components/Rank/Rank';
@@ -76,6 +76,7 @@ class App extends Component {
            this.getProfileAndLoadUser(data.id, token)
          }
        })
+       .catch(err => console.log('error signin', err))
     }
   }
 
@@ -83,17 +84,17 @@ class App extends Component {
       window.sessionStorage.setItem('token', token)
   }
    
-  removeAuthTokenFromSession = () =>{
-     fetch(`${process.env.REACT_APP_SERVER}/signout`, {
-       method: 'put',
-       headers: {
-         'Content-Type': 'application/json',
-         'Authorization': window.sessionStorage.getItem('token')
-       }
-     })
-      .then(res=>res.json)
-      .catch(console.log)
-    window.sessionStorage.removeItem('token');
+  removeAuthTokenFromSession = (token) =>{
+      fetch(`${process.env.REACT_APP_SERVER}/signout`, {
+        method: 'put',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': token
+        }
+      })
+       .then(res=>res.json)
+       .catch(console.log)
+     window.sessionStorage.removeItem('token');
   }
 
 
@@ -106,7 +107,7 @@ class App extends Component {
       joined: data.joined
     }})
   }
-   
+  
   calculateFaceLocations = (data) =>{
     if(data && data.outputs){
       console.log(data);
@@ -181,7 +182,10 @@ class App extends Component {
 
   onRouteChange = (route) => {
     if(route==='signin'||route==='register'){
-      this.removeAuthTokenFromSession();
+      if(window.sessionStorage.length){
+        let token = window.sessionStorage.getItem('token');
+        this.removeAuthTokenFromSession(token);
+      }
       this.setState(initialState) // initialstate is used to clear the state after signout
     }
     else if(route==='home'){
@@ -205,7 +209,7 @@ class App extends Component {
             onRouteChange={this.onRouteChange}/>
           {this.state.route==='home'?
             <div> 
-              <Logo/>
+              {/* <Logo/> */}
               <Rank name = {this.state.user.name} entries={this.state.user.entries} urlRes={this.state.urlRes}/>
               <ImageLinkForm 
                 onInputChange = {this.onInputChange}

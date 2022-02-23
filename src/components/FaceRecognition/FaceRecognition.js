@@ -12,10 +12,10 @@ const FaceRecognition = ({imageUrl, box}) => {
                             width='500px'
                             height= 'auto'
                         />
-                    {box.map(box=>{
+                    {box.map((box, i)=>{
                         // console.log(box.topRow);
                         return(
-                                <div className='bounding-box' style={{ top: box.topRow, right: box.rightCol, bottom: box.bottomRow, left: box.leftCol}}></div>
+                                <div key ={i} className='bounding-box' style={{ top: box.topRow, right: box.rightCol, bottom: box.bottomRow, left: box.leftCol}}></div>
                         );
                     })}
                     </div>

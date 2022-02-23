@@ -46,7 +46,7 @@ function EditProfile ({toggleProfileEditing, user, loaduser}){
         <div className='measure center ma0'>
             <div className='measure center tl w-80 w-50-ns'>
                 <p className="lh-copy f5 black-70"><strong>Name: {name}<input onChange={onFormChange} type='text' name='user-name' value={name} /></strong></p>
-                <p className="lh-copy f5 black-70"><strong>Email: {email}<input onChange={onFormChange} type='email' name='user-email' value={email} readOnly /></strong></p>
+                <p className="lh-copy f5 black-70"><strong>Email: {email}<input onChange={onFormChange} className="bg-light-gray" type='email' name='user-email' value={email} disabled /></strong></p>
                 <p className="lh-copy f5 black-70"><strong>Images submitted: {user.entries}</strong></p>
             </div>
             <p 
