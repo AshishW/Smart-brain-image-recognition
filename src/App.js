@@ -9,6 +9,7 @@ import Rank from './components/Rank/Rank';
 import Register from './components/Register/Register'
 import Particles from 'react-particles-js';
 import Profile from './components/Profile/Profile';
+import Loading from './components/LoadingAnimation/Loading';
 
 
 const particlesOptions ={
@@ -46,7 +47,7 @@ class App extends Component {
   }
   
   getProfileAndLoadUser = (userId, token) =>{
-    fetch(`${process.env.REACT_APP_SERVER}/profile/${userId}`, {
+    fetch(`https://intense-sea-48271.herokuapp.com/profile/${userId}`, {
       method: 'get',
       headers:{
         'Content-Type': 'application/json',
@@ -63,7 +64,8 @@ class App extends Component {
   componentDidMount(){
     const token = window.sessionStorage.getItem('token');
     if(token){
-      fetch(`${process.env.REACT_APP_SERVER}/signin`, {
+      this.setState({route: 'loadingScreen'});
+      fetch(`https://intense-sea-48271.herokuapp.com/signin`, {
         method: 'post',
         headers: {
           'Content-Type': 'application/json',
@@ -85,7 +87,7 @@ class App extends Component {
   }
    
   removeAuthTokenFromSession = (token) =>{
-      fetch(`${process.env.REACT_APP_SERVER}/signout`, {
+      fetch(`https://intense-sea-48271.herokuapp.com/signout`, {
         method: 'put',
         headers: {
           'Content-Type': 'application/json',
@@ -110,7 +112,7 @@ class App extends Component {
   
   calculateFaceLocations = (data) =>{
     if(data && data.outputs){
-      console.log(data);
+      // console.log(data);
       //  const clarifaiFace = data.outputs[0].data.regions[0].region_info.bounding_box;
   
        const image = document.getElementById('inputImage');
@@ -149,7 +151,7 @@ class App extends Component {
       return this.setState({urlRes: true})
     }
     this.setState({urlRes: false})
-    fetch(`${process.env.REACT_APP_SERVER}/imageurl`, { 
+    fetch(`https://intense-sea-48271.herokuapp.com/imageurl`, { 
       method: 'post',
       headers:{
         'Content-Type':'application/json',
@@ -163,7 +165,7 @@ class App extends Component {
     .then(response => {
       if(response){
           this.setState({urlRes: true})
-          fetch(`${process.env.REACT_APP_SERVER}/image`,{ // put request for user entries update
+          fetch(`https://intense-sea-48271.herokuapp.com/image`,{ // put request for user entries update
           method:'put',
           headers:{
             'Content-Type':'application/json',
@@ -199,6 +201,13 @@ class App extends Component {
 
 
   render(){ 
+    if(this.state.route === 'loadingScreen'){
+      return (
+        <div>
+          <Loading/>
+        </div>
+      );
+    }
     return (
       <div className="App">
          <Particles className='particles'

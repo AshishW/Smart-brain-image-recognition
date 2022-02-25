@@ -19,7 +19,7 @@ class Register extends React.Component{
         this.setState({registerPassword:event.target.value})
     }
     onRegister=()=>{
-        fetch(`${process.env.REACT_APP_SERVER}/register`,{
+        fetch(`https://intense-sea-48271.herokuapp.com/register`,{
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({

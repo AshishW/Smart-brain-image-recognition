@@ -27,7 +27,7 @@ class Signin extends React.Component{
             alert('incorrect form submission')
         }
         else{
-            fetch(`${process.env.REACT_APP_SERVER}/signin`, {
+            fetch(`https://intense-sea-48271.herokuapp.com/signin`, {
             method: 'post',
             headers:{'Content-Type': 'application/json'},
             body: JSON.stringify({

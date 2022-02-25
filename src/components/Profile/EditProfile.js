@@ -21,7 +21,7 @@ function EditProfile ({toggleProfileEditing, user, loaduser}){
     }
      
     const onFormSubmit = (data) =>{
-            fetch(`${process.env.REACT_APP_SERVER}/profile/${user.id}`, {
+            fetch(`https://intense-sea-48271.herokuapp.com/profile/${user.id}`, {
                 method: 'put',
                 headers: {
                     'Content-Type': 'application/json',
