@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/Smart-brain-image-recognition/static/css/main.fa17920e.chunk.css",
+    "main.js": "/Smart-brain-image-recognition/static/js/main.e5f8d529.chunk.js",
+    "main.js.map": "/Smart-brain-image-recognition/static/js/main.e5f8d529.chunk.js.map",
+    "runtime-main.js": "/Smart-brain-image-recognition/static/js/runtime-main.c9a79123.js",
+    "runtime-main.js.map": "/Smart-brain-image-recognition/static/js/runtime-main.c9a79123.js.map",
+    "static/css/2.3f25b447.chunk.css": "/Smart-brain-image-recognition/static/css/2.3f25b447.chunk.css",
+    "static/js/2.dbe8b002.chunk.js": "/Smart-brain-image-recognition/static/js/2.dbe8b002.chunk.js",
+    "static/js/2.dbe8b002.chunk.js.map": "/Smart-brain-image-recognition/static/js/2.dbe8b002.chunk.js.map",
+    "static/js/3.df50045e.chunk.js": "/Smart-brain-image-recognition/static/js/3.df50045e.chunk.js",
+    "static/js/3.df50045e.chunk.js.map": "/Smart-brain-image-recognition/static/js/3.df50045e.chunk.js.map",
+    "index.html": "/Smart-brain-image-recognition/index.html",
+    "static/css/2.3f25b447.chunk.css.map": "/Smart-brain-image-recognition/static/css/2.3f25b447.chunk.css.map",
+    "static/css/main.fa17920e.chunk.css.map": "/Smart-brain-image-recognition/static/css/main.fa17920e.chunk.css.map",
+    "static/js/2.dbe8b002.chunk.js.LICENSE.txt": "/Smart-brain-image-recognition/static/js/2.dbe8b002.chunk.js.LICENSE.txt",
+    "static/media/logo.248c3362.png": "/Smart-brain-image-recognition/static/media/logo.248c3362.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c9a79123.js",
+    "static/css/2.3f25b447.chunk.css",
+    "static/js/2.dbe8b002.chunk.js",
+    "static/css/main.fa17920e.chunk.css",
+    "static/js/main.e5f8d529.chunk.js"
+  ]
+}
