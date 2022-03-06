@@ -3,16 +3,13 @@
 ## Backend repository:
 [Smart-Brain-ImageRecognition-Backend](https://github.com/AshishW/Smart-brain-image-recognition-API)
  
-<img src = "./images/smartBrain.png" height = "500px" width = "500px">
+## Face detection web application called Smart-Brain that allows the user to upload an image address/URL and uses machine learning model from Clarifai (REST API) to detect face in that image.
 
- ### Face detection web application called Smart-Brain that allows the user to upload an image address/URL and uses machine learning model from Clarifai (REST API) to detect face in that image.
+![Smart-Brain-ImageRecognition](./images/smartBrain.png)
 
-<img src = "./images/view_profile.png" height = "500px" width = "500px">
+![Smart-Brain-ImageRecognition](./images/view_profile.png)
 
-
-<img src = "./images/edit_profile.png" height = "500px" width = "500px">
-
-
+![Smart-Brain-ImageRecognition](./images/edit_profile.png)
 
 
 
