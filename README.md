@@ -1,5 +1,9 @@
 # Full-stack Smart-brain Face-Recognition web app
 
+![Smart-Brain-ImageRecognition]("./images/smartBrain.png");
+![Smart-Brain-ImageRecognition]("./images/view_profile.png");
+![Smart-Brain-ImageRecognition]("./images/edit_profile.png");
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
