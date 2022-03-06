@@ -1,8 +1,14 @@
 # Full-stack Smart-brain Face-Recognition web app
 
-![Smart-Brain-ImageRecognition](./images/smartBrain.png);
-![Smart-Brain-ImageRecognition](./images/view_profile.png);
-![Smart-Brain-ImageRecognition](./images/edit_profile.png);
+![Smart-Brain-ImageRecognition](./images/smartBrain.png)
+
+- Face detection web application called Smart-Brain that allows the user to upload an image address/URL and uses machine learning model from Clarifai (REST API) to detect face in that image.
+
+![Smart-Brain-ImageRecognition](./images/view_profile.png)
+
+![Smart-Brain-ImageRecognition](./images/edit_profile.png)
+
+
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
