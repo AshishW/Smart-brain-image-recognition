@@ -6,6 +6,7 @@
 ## Face detection web application called Smart-Brain that allows the user to upload an image address/URL and uses machine learning model from Clarifai (REST API) to detect face in that image.
 
 - To view live website: [click here](https://ashishw.github.io/Smart-brain-image-recognition/)
+
 ![Smart-Brain-ImageRecognition](./images/smartBrain.png)
 
 ![Smart-Brain-ImageRecognition](./images/view_profile.png)
