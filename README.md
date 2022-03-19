@@ -11,7 +11,7 @@
 
 ## features:
 
-- User can upload images using image address to detect faces in those images.
+- User can upload images using the image address to detect faces in those images.
 - Profile page that allows the user to view and update their profile.
 - Token based session management with authenticated routes.
 
