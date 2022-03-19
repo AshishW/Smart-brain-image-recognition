@@ -9,6 +9,12 @@
 
 ![Smart-Brain-ImageRecognition](./images/smartBrain.png)
 
+## features:
+
+- User can upload images using image address to detect faces in those images.
+- Profile page that allows the user to view and update their profile.
+- Token based session management with authenticated routes.
+
 ![Smart-Brain-ImageRecognition](./images/view_profile.png)
 
 ![Smart-Brain-ImageRecognition](./images/edit_profile.png)
