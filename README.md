@@ -1,4 +1,4 @@
-# Full-stack Smart-brain Face-Recognition web app
+# Full-stack Smart-brain Face-Recognition web app Frontend
 
 ## Backend repository:
 [Smart-Brain-ImageRecognition-Backend](https://github.com/AshishW/Smart-brain-image-recognition-API)
