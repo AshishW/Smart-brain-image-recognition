@@ -163,7 +163,7 @@ class App extends Component {
     })
     .then(response=> response.json())
     .then(response => {
-      if(response){
+      if(typeof response === "object"){
           this.setState({urlRes: true})
           fetch(`https://intense-sea-48271.herokuapp.com/image`,{ // put request for user entries update
           method:'put',
@@ -177,9 +177,13 @@ class App extends Component {
             this.setState(Object.assign(this.state.user, {entries: count}))
           })
           .catch(console.log)
+          this.displayFaceBox(this.calculateFaceLocations(response))
+        }else{
+          this.setState({urlRes: true})
+          alert("invalid image url")
         }
-      this.displayFaceBox(this.calculateFaceLocations(response))})
-    .catch(error =>  console.log(error))
+      })
+    .catch(error =>  console.log("problem submiting image and updating entries", error))
   }
 
   onRouteChange = (route) => {
