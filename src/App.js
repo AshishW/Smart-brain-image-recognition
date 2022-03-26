@@ -163,7 +163,8 @@ class App extends Component {
     })
     .then(response=> response.json())
     .then(response => {
-      if(typeof response === "object"){
+      if(typeof response === "object" && response.outputs[0].data.regions){
+        console.log(response)
           this.setState({urlRes: true})
           fetch(`https://intense-sea-48271.herokuapp.com/image`,{ // put request for user entries update
           method:'put',
@@ -208,7 +209,7 @@ class App extends Component {
     if(this.state.route === 'loadingScreen'){
       return (
         <div>
-          <Loading/>
+          <Loading route = {this.state.route}/>
         </div>
       );
     }

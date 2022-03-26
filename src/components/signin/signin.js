@@ -7,6 +7,7 @@ class Signin extends React.Component{
         this.state ={
             signinEmail: '',
             signinPassword: '',
+            signinError: false
         }
     }
     
@@ -23,10 +24,12 @@ class Signin extends React.Component{
     // }
 
     onSubmitChange=()=>{
+        const {onRouteChange} = this.props;
         if(this.state.signinEmail==='' || this.state.signinPassword===''){
             alert('incorrect form submission')
         }
         else{
+            onRouteChange('loadingScreen')
             fetch(`https://intense-sea-48271.herokuapp.com/signin`, {
             method: 'post',
             headers:{'Content-Type': 'application/json'},
@@ -39,7 +42,9 @@ class Signin extends React.Component{
             .then(data=>{
                 if( data && data.userId){
                     this.props.saveAuthTokenToSession(data.token)
-                    this.props.getProfileAndLoadUser(data.userId, data.token)
+                    this.props.getProfileAndLoadUser(data.userId, data.token).then(onRouteChange('home'))
+                }else{
+                    onRouteChange('signin')
                 }
             }).catch(err => console.log('error signin'))
         }
