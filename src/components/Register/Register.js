@@ -19,6 +19,8 @@ class Register extends React.Component{
         this.setState({registerPassword:event.target.value})
     }
     onRegister=()=>{
+        const {onRouteChange} = this.props;
+        onRouteChange('loadingScreen')
         fetch(`https://intense-sea-48271.herokuapp.com/register`,{
             method: 'post',
             headers: {'Content-Type': 'application/json'},
@@ -33,6 +35,8 @@ class Register extends React.Component{
             if( data && data.userId){
                 this.props.saveAuthTokenToSession(data.token)
                 this.props.getProfileAndLoadUser(data.userId, data.token)
+            }else{
+                onRouteChange('register')
             }
         }).catch(err => console.log('registation error'))
     }

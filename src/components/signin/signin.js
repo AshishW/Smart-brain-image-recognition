@@ -42,11 +42,12 @@ class Signin extends React.Component{
             .then(data=>{
                 if( data && data.userId){
                     this.props.saveAuthTokenToSession(data.token)
-                    this.props.getProfileAndLoadUser(data.userId, data.token).then(onRouteChange('home'))
+                    this.props.getProfileAndLoadUser(data.userId, data.token)
+                    // onRouteChange('home');
                 }else{
                     onRouteChange('signin')
                 }
-            }).catch(err => console.log('error signin'))
+            }).catch(err => console.log('error signin', err))
         }
     }
     render(){
