@@ -19,26 +19,34 @@ class Register extends React.Component{
         this.setState({registerPassword:event.target.value})
     }
     onRegister=()=>{
+        const {registerName, registerEmail, registerPassword} = this.state;
         const {onRouteChange} = this.props;
-        onRouteChange('loadingScreen')
-        fetch(`https://intense-sea-48271.herokuapp.com/register`,{
-            method: 'post',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({
-                name: this.state.registerName,
-                email: this.state.registerEmail,
-                password: this.state.registerPassword
+        if((!registerName || !registerEmail || !registerPassword)){
+            alert('invalid form submission')
+        }else if(registerPassword.length < 8){
+            alert('please enter strong password with atleast 8 characters with uppercase, lowercase and special characters')
+        }
+        else{
+            onRouteChange('loadingScreen')
+            fetch(`https://intense-sea-48271.herokuapp.com/register`,{
+                method: 'post',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({
+                    name: registerName,
+                    email: registerEmail,
+                    password: registerPassword
+                })
             })
-        })
-        .then(res=> res.json())
-        .then(data=>{
-            if( data && data.userId){
-                this.props.saveAuthTokenToSession(data.token)
-                this.props.getProfileAndLoadUser(data.userId, data.token)
-            }else{
-                onRouteChange('register')
-            }
-        }).catch(err => console.log('registation error'))
+            .then(res=> res.json())
+            .then(data=>{
+                if( data && data.userId){
+                    this.props.saveAuthTokenToSession(data.token)
+                    this.props.getProfileAndLoadUser(data.userId, data.token)
+                }else{
+                    onRouteChange('register')
+                }
+            }).catch(err => console.log('registation error'))
+        }
     }
     render(){
         return(
