@@ -1,5 +1,5 @@
 import React from 'react';
-import ProfileImage from '../Profile/ProfileImage';
+import ProfileMenu from '../Profile/ProfileMenu';
 
 const Navigation = ({onRouteChange, isSignin, profile}) =>{
   if(profile){
@@ -14,7 +14,7 @@ const Navigation = ({onRouteChange, isSignin, profile}) =>{
    return(
      <nav className='flex flex-row-reverse'> 
         <div  className='pa2 pointer'>
-          <ProfileImage onRouteChange={onRouteChange}/>
+          <ProfileMenu onRouteChange={onRouteChange}/>
         </div>
         {/* <p onClick={()=>{onRouteChange('signin')}} className='f3 link dim black underline pa3 pointer'>Sign out</p> */}
     </nav>

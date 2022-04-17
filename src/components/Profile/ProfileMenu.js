@@ -3,7 +3,7 @@ import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap
 import Logo from './logo.png';
 
 
-const ProfileImage = ({onRouteChange}) => {
+const ProfileMenu = ({onRouteChange}) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const toggle = () => setDropdownOpen(prevState => !prevState);
@@ -26,6 +26,6 @@ const ProfileImage = ({onRouteChange}) => {
   );
 }
 
-export default ProfileImage;
+export default ProfileMenu;
 
 
