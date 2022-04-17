@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Smart-brain-image-recognition/static/css/main.be1ea17d.chunk.css",
-    "main.js": "/Smart-brain-image-recognition/static/js/main.773a9ccd.chunk.js",
-    "main.js.map": "/Smart-brain-image-recognition/static/js/main.773a9ccd.chunk.js.map",
+    "main.css": "/Smart-brain-image-recognition/static/css/main.dea8e6b3.chunk.css",
+    "main.js": "/Smart-brain-image-recognition/static/js/main.1b2fb913.chunk.js",
+    "main.js.map": "/Smart-brain-image-recognition/static/js/main.1b2fb913.chunk.js.map",
     "runtime-main.js": "/Smart-brain-image-recognition/static/js/runtime-main.c9a79123.js",
     "runtime-main.js.map": "/Smart-brain-image-recognition/static/js/runtime-main.c9a79123.js.map",
     "static/css/2.3f25b447.chunk.css": "/Smart-brain-image-recognition/static/css/2.3f25b447.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.df50045e.chunk.js.map": "/Smart-brain-image-recognition/static/js/3.df50045e.chunk.js.map",
     "index.html": "/Smart-brain-image-recognition/index.html",
     "static/css/2.3f25b447.chunk.css.map": "/Smart-brain-image-recognition/static/css/2.3f25b447.chunk.css.map",
-    "static/css/main.be1ea17d.chunk.css.map": "/Smart-brain-image-recognition/static/css/main.be1ea17d.chunk.css.map",
+    "static/css/main.dea8e6b3.chunk.css.map": "/Smart-brain-image-recognition/static/css/main.dea8e6b3.chunk.css.map",
     "static/js/2.dbe8b002.chunk.js.LICENSE.txt": "/Smart-brain-image-recognition/static/js/2.dbe8b002.chunk.js.LICENSE.txt",
     "static/media/logo.248c3362.png": "/Smart-brain-image-recognition/static/media/logo.248c3362.png"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.c9a79123.js",
     "static/css/2.3f25b447.chunk.css",
     "static/js/2.dbe8b002.chunk.js",
-    "static/css/main.be1ea17d.chunk.css",
-    "static/js/main.773a9ccd.chunk.js"
+    "static/css/main.dea8e6b3.chunk.css",
+    "static/js/main.1b2fb913.chunk.js"
   ]
 }
