@@ -25,6 +25,8 @@ class Register extends React.Component{
             alert('invalid form submission')
         }else if(registerPassword.length < 8){
             alert('please enter strong password with atleast 8 characters with uppercase, lowercase and special characters')
+        }else if(!registerEmail.includes('@')){
+            alert('invalid email address')
         }
         else{
             onRouteChange('loadingScreen')
