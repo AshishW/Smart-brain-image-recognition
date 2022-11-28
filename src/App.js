@@ -47,7 +47,7 @@ class App extends Component {
   }
   
   getProfileAndLoadUser = (userId, token) =>{
-    fetch(`https://intense-sea-48271.herokuapp.com/profile/${userId}`, {
+    fetch(`https://smartbrain-api-zxw3.onrender.com/profile/${userId}`, {
       method: 'get',
       headers:{
         'Content-Type': 'application/json',
@@ -65,7 +65,7 @@ class App extends Component {
     const token = window.sessionStorage.getItem('token');
     if(token){
       this.setState({route: 'loadingScreen'});
-      fetch(`https://intense-sea-48271.herokuapp.com/signin`, {
+      fetch(`https://smartbrain-api-zxw3.onrender.com/signin`, {
         method: 'post',
         headers: {
           'Content-Type': 'application/json',
@@ -87,7 +87,7 @@ class App extends Component {
   }
    
   removeAuthTokenFromSession = (token) =>{
-      fetch(`https://intense-sea-48271.herokuapp.com/signout`, {
+      fetch(`https://smartbrain-api-zxw3.onrender.com/signout`, {
         method: 'put',
         headers: {
           'Content-Type': 'application/json',
@@ -151,7 +151,7 @@ class App extends Component {
       return this.setState({urlRes: true})
     }
     this.setState({urlRes: false})
-    fetch(`https://intense-sea-48271.herokuapp.com/imageurl`, { 
+    fetch(`https://smartbrain-api-zxw3.onrender.com/imageurl`, { 
       method: 'post',
       headers:{
         'Content-Type':'application/json',
@@ -166,7 +166,7 @@ class App extends Component {
       if(typeof response === "object" && response.outputs[0].data.regions){
         console.log(response)
           this.setState({urlRes: true})
-          fetch(`https://intense-sea-48271.herokuapp.com/image`,{ // put request for user entries update
+          fetch(`https://smartbrain-api-zxw3.onrender.com/image`,{ // put request for user entries update
           method:'put',
           headers:{
             'Content-Type':'application/json',

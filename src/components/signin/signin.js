@@ -30,7 +30,7 @@ class Signin extends React.Component{
         }
         else{
             onRouteChange('loadingScreen')
-            fetch(`https://intense-sea-48271.herokuapp.com/signin`, {
+            fetch(`https://smartbrain-api-zxw3.onrender.com/signin`, {
             method: 'post',
             headers:{'Content-Type': 'application/json'},
             body: JSON.stringify({

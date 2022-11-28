@@ -30,7 +30,7 @@ class Register extends React.Component{
         }
         else{
             onRouteChange('loadingScreen')
-            fetch(`https://intense-sea-48271.herokuapp.com/register`,{
+            fetch(`https://smartbrain-api-zxw3.onrender.com/register`,{
                 method: 'post',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({

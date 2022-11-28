@@ -21,7 +21,7 @@ function EditProfile ({toggleProfileEditing, user, loaduser}){
     }
      
     const onFormSubmit = (data) =>{
-            fetch(`https://intense-sea-48271.herokuapp.com/profile/${user.id}`, {
+            fetch(`https://smartbrain-api-zxw3.onrender.com/profile/${user.id}`, {
                 method: 'put',
                 headers: {
                     'Content-Type': 'application/json',
