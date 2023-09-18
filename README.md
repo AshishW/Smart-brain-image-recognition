@@ -7,6 +7,8 @@
 
 - To view live website: [click here](https://ashishw.github.io/Smart-brain-image-recognition/)
 
+![example 1](./images/avg_grp_pic.jpg)
+
 ![Smart-Brain-ImageRecognition](./images/smartBrain.png)
 
 ## features:
